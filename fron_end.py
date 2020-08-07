@@ -36,7 +36,8 @@ class PaintLabel(QLabel):
     def change_color(self):
         self.setStyleSheet(f"background-color: qradialgradient(cx:0, cy:0, radius: 1 ,"
                            f"fx:0.5, fy:0.5,stop:0 white, stop:1 {self.estado});"
-                           f"border-radius: 20px;")
+                           f"border-radius: 20px;"
+                           f"")
 
 
 
@@ -60,6 +61,11 @@ class MainWindow(QWidget):
         theta = 2 * np.pi / len(self.letras)
         for label in self.letras.values():
             label.resize(40, 40)
+            label.setStyleSheet("border: 2px solid blue; "
+                                "border-radius: 20px;"
+                                "background-color: qradialgradient(cx:0, cy:0, radius: 1 ,"
+                                "fx:0.5, fy:0.5,stop:0 white, stop:1 blue)")
+
             angle = theta * (i)
             dx = int(round(200 + 165 * np.cos(angle - np.pi/2)))
             dy = int(round(200 + 165 * np.sin(angle - np.pi/2)))
