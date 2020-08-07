@@ -1,4 +1,4 @@
-# Rosco
+# Rosco :ab:
  Rosco de pasapalabra para jugar online
 ## Como usarlo
 1. Descargar [python](https://www.python.org/downloads/) versiones 3.7 o 3.6
