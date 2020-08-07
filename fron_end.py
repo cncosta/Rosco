@@ -10,25 +10,35 @@ class PaintLabel(QLabel):
         super().__init__('round label', *args)
         self.setText(letra)
         self.setAlignment(Qt.AlignCenter)
-        self.estado = "white"
+        self.estado = "blue"
+        self.resize(40, 40)
+        self.change_color()
+
 
     def mousePressEvent(self, QMouseEvent):
-        if self.estado == "white":
-            self.setStyleSheet('background-color: green; border-radius: 20px;')
+        if self.estado == "blue":
             self.estado = "green"
 
         elif self.estado == "green":
-            self.setStyleSheet('background-color: red; border-radius: 20px;')
             self.estado = "red"
+
+
         elif self.estado == "red":
             self.estado = "yellow"
-            self.setStyleSheet('background-color: #f5dd29; border-radius: 20px;')
+
 
         elif self.estado == "yellow":
-            self.estado = "white"
-            self.setStyleSheet('background-color: rgb 0 0 0 0; '
-                               'border-radius: 20px;'
-                               'border: 2px solid blue')
+            self.estado = "blue"
+
+        self.change_color()
+
+
+    def change_color(self):
+        self.setStyleSheet(f"background-color: qradialgradient(cx:0, cy:0, radius: 1 ,"
+                           f"fx:0.5, fy:0.5,stop:0 white, stop:1 {self.estado});"
+                           f"border-radius: 20px;"
+                           f"")
+
 
 
 class MainWindow(QWidget):
@@ -52,7 +62,10 @@ class MainWindow(QWidget):
         for label in self.letras.values():
             label.resize(40, 40)
             label.setStyleSheet("border: 2px solid blue; "
-                                "border-radius: 20px;")
+                                "border-radius: 20px;"
+                                "background-color: qradialgradient(cx:0, cy:0, radius: 1 ,"
+                                "fx:0.5, fy:0.5,stop:0 white, stop:1 blue)")
+
             angle = theta * (i)
             dx = int(round(200 + 165 * np.cos(angle - np.pi/2)))
             dy = int(round(200 + 165 * np.sin(angle - np.pi/2)))
