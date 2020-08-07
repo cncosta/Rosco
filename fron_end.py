@@ -5,7 +5,6 @@ import sys
 import parametros as pm
 
 class PaintLabel(QLabel):
-
     def __init__(self,letra,*args):
         super().__init__('round label', *args)
         self.setText(letra)
@@ -60,7 +59,7 @@ class MainWindow(QWidget):
         theta = 2 * np.pi / len(self.letras)
         for label in self.letras.values():
             label.resize(40, 40)
-            angle = theta * (i)
+            angle = theta * i
             dx = int(round(200 + 165 * np.cos(angle - np.pi/2)))
             dy = int(round(200 + 165 * np.sin(angle - np.pi/2)))
             label.move(dx,dy)
