@@ -1,4 +1,4 @@
-# Rosco :ab:
+# Rosco :ab: :red: :blue:
  Rosco de pasapalabra para jugar online
 ## Como usarlo
 ### Ejecutarlo en Python
