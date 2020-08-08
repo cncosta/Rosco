@@ -15,4 +15,4 @@
 Cada vez que se hace click en una letra, esta cambiara de color, pasando de 
 ``transparente -> verde -> rojo -> amarillo -> transparente``. 
 
-![](foto/Captura de pantalla 2020-08-07 a la(s) 20.01.42.png)
+![](foto/Captura\de\pantalla\2020-08-07\a\la(s)\20.01.42.png)
