@@ -13,6 +13,6 @@
 
 ## Funcionamiento
 Cada vez que se hace click en una letra, esta cambiara de color, pasando de 
-``transparente -> verde -> rojo -> amarillo -> transparente``. 
+``azul -> verde -> rojo -> amarillo -> azul``. 
 
 ![](foto/foto.png)
