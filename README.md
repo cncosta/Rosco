@@ -9,7 +9,7 @@
 
 #### Para descargar la aplicacion para MacOS ir al siguente [link](https://drive.google.com/drive/folders/1mP8Fu-MCwGMru6dQP96C5xUhqY7aBtcn?usp=sharing)
 
-#### Vercion Windows no implementada aún. 
+#### Version Windows no implementada aún. 
 
 ## Funcionamiento
 Cada vez que se hace click en una letra, esta cambiara de color, pasando de 
